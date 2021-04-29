@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'dbConfig.php';
-
+require 'vendor/autoload.php';
 $tables = $conn->query("SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = 'ecommerce' AND TABLE_COMMENT <> 'private'");
 $table = $tables->fetch_all();
 
