@@ -58,7 +58,7 @@
                 <div class="header_main">
                     <div class="container">
                         <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="margin-left: -50px;margin-top: -35px;margin-right: 100px;max-width: 150px;">
                                 <div class="full">
                                     <div class="center-desk">
                                         <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>

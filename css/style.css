@@ -1155,7 +1155,7 @@ ul.top_icon li a {
 .main-menu ul>li {
      position: inherit;
      display: inline-block;
-     vertical-align: middle;
+     /* vertical-align: middle; */
 }
 .main-menu ul>li a:hover,.main-menu ul>li button:hover {
      color: #fff;

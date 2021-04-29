@@ -2,7 +2,7 @@
 <?php
 require_once "dbConfig.php";
 // GETTING TABLE
-$tables = $conn->query("SELECT Table_name as TableName from information_schema.tables where table_schema = 'ecommerce' AND table_name <> 'login';");
+$tables = $conn->query("SELECT * from categories WHERE table_comment = 'open';");
 ?>
 
 <div class="jumbotron add">
@@ -15,7 +15,7 @@ $tables = $conn->query("SELECT Table_name as TableName from information_schema.t
                 <select name="categ" id="" class="custom-select">
                     <?php if ($tables->num_rows > 0) {
                         while ($row = $tables->fetch_assoc()) { ?>
-                            <option value="<?php echo $row['TableName']; ?>"><?php echo strtoupper($row['TableName']); ?></option>
+                            <option value="<?php echo $row['table_name']; ?>"><?php echo strtoupper($row['table_name']); ?></option>
                     <?php }
                     } ?>
                 </select>
@@ -83,7 +83,9 @@ $tables = $conn->query("SELECT Table_name as TableName from information_schema.t
                 header("Location:Dashboard.php");
 // CREATING NEW TABLE
             } else {
-                $createTable = "CREATE TABLE `ecommerce`." . $_POST['nCateg'] . " ( `id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(255) NOT NULL , `descrip` TEXT NOT NULL , `image` JSON NOT NULL , `price` INT NOT NULL , `time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB";
+                $createTable = "CREATE TABLE " . $_POST['nCateg'] . " ( `id` INT NOT NULL AUTO_INCREMENT , `title` VARCHAR(255) NOT NULL , `descrip` TEXT NOT NULL , `image` JSON NOT NULL , `price` INT NOT NULL , `time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB";
+                $tableentry = "INSERT INTO categories (table_name) VALUES ('". $_POST['nCateg'] ."')";
+                $conn->query($tableentry);
                 if ($conn->query($createTable)) {
                     $_POST['categ'] = $_POST['nCateg'];
                 } else {

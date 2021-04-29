@@ -46,14 +46,14 @@
         $_SESSION['product'] = strtolower($_POST['product']);
         header("Location:../");
     }
-    if (isset($_POST['order'])) { 
+    if (isset($_POST['order'])) {
         require_once '../dbConfig.php';
         $sql = "INSERT INTO orders (`prod.category`, `prod.id`, `quantity`, `address`, `phoneNo`) VALUES ('" . $_SESSION['showall-table'] . "', '" . $_SESSION['product'] . "', '" . $_POST['quantity'] . "', '" . $_POST['addr'] . "', '" . $_POST['phn'] . "')";
         if ($conn->query($sql)) {
             $_SESSION['orderMsg'] = "Order Placed";
             header("Location:../");
         } else {
-            $_SESSION['orderMsg'] = "Unable to process request";
+            $_SESSION['orderMsg'] = $conn->error;
             header("Location:../");
         }
     }

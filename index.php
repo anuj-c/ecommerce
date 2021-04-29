@@ -2,10 +2,13 @@
 session_start();
 require_once 'dbConfig.php';
 require 'vendor/autoload.php';
-$tables = $conn->query("SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = 'ecommerce' AND TABLE_COMMENT <> 'private'");
+// $tables = $conn->query("SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = 'ecommerce' AND TABLE_COMMENT <> 'private'");
+$tables = $conn->query("SELECT * from categories WHERE table_comment = 'open';");
 $table = $tables->fetch_all();
+// print_r($table);
 
 if (!isset($_SESSION['showall-table'])) {
+    
 require "templates/views/testheader.php";
 ?>
     <section>
@@ -83,13 +86,13 @@ require "templates/views/testheader.php";
     </section>
     <form action="upload/nav.php" method="POST">
         <?php for ($i = 0; $i < $tables->num_rows; $i++) {
-            $categ = $conn->query("SELECT image,title,price FROM " . $table[$i][0] . " ORDER BY time LIMIT 6"); ?>
+            $categ = $conn->query("SELECT image,title,price FROM " . $table[$i][1] . " ORDER BY time LIMIT 6"); ?>
             <div id="plant" class="section product">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="titlepage">
-                                <h2><strong class="black text-uppercase"><?php echo $table[$i][0] ?></strong> Clothing <button style="font-size: 1.5rem;float:right;border:2px solid black;" class="btn border-1 text-monospace" value="<?php echo $table[$i][0] ?>" name="showall">Show all<i class='fas fa-arrow-alt-circle-right'></i></button></h2>
+                                <h2><strong class="black text-uppercase"><?php echo $table[$i][1] ?></strong> Clothing <button style="font-size: 1.5rem;float:right;border:2px solid black;" class="btn border-1 text-monospace" value="<?php echo $table[$i][1] ?>" name="showall">Show all<i class='fas fa-arrow-alt-circle-right'></i></button></h2>
                             </div>
                         </div>
                     </div>
@@ -102,7 +105,7 @@ require "templates/views/testheader.php";
                             while ($row = $categ->fetch_assoc()) { ?>
                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                     <div class="sport_product">
-                                        <figure><img src="image/<?php echo $table[$i][0] . "/" . json_decode($row['image'])[0] ?>" /></figure>
+                                        <figure><img src="image/<?php echo $table[$i][1] . "/" . json_decode($row['image'])[0] ?>" /></figure>
                                         <h3>₹<strong class="price_text"><?php echo $row['price'] ?></strong></h3>
                                         <h4 class="text-uppercase"><?php echo $row['title'] ?></h4>
                                     </div>
