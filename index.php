@@ -8,7 +8,7 @@ $table = $tables->fetch_all();
 // print_r($table);
 
 if (!isset($_SESSION['showall-table'])) {
-    
+
 require "templates/views/testheader.php";
 ?>
     <section>
@@ -32,7 +32,7 @@ require "templates/views/testheader.php";
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="img-box">
-                                    <figure><img src="images/boksing-gloves.png" alt="img" /></figure>
+                                    <figure><img src="img/boksing-gloves.png" alt="img" /></figure>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@ require "templates/views/testheader.php";
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="img-box ">
-                                    <figure><img src="images/boksing-gloves.png" alt="img" /></figure>
+                                    <figure><img src="img/boksing-gloves.png" alt="img" /></figure>
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@ require "templates/views/testheader.php";
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="img-box">
-                                    <figure><img src="images/boksing-gloves.png" alt="img" /></figure>
+                                    <figure><img src="img/boksing-gloves.png" alt="img" /></figure>
                                 </div>
                             </div>
                         </div>
