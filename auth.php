@@ -1,9 +1,9 @@
 <?php
 require_once 'dbConfig.php';
-require_once 'vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-$var = $_ENV['PASS'];
+// require_once 'vendor/autoload.php';
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+$var = getenv('PASS');
 // session_start();
 if (isset($_POST['login'])) {
     $salt = $var;
