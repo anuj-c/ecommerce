@@ -1,0 +1,6 @@
+.env
+/vendor
+/images
+/sock
+test.php
+index2.php

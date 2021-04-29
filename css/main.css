@@ -1,0 +1,140 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+.product-page .carousel{
+  width: 30vw;
+  border: 1px solid black;
+}
+.product-page .descrip{
+  width: 40vw;
+  position: relative;
+}
+.product-page .order-details{
+  width: 30vw;
+  position: relative;
+}
+.row{
+  flex-wrap: nowrap;
+}
+button.navbar-brand {
+  position: relative;
+  height: 10vmin;
+  width: 10vmin;
+}
+button.navbar-brand img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.product-page .carousel-item img {
+  width: 100%;
+}
+.product-page .carousel-indicators .active {
+  border: 2px solid black;
+}
+.showing .row {
+  overflow: auto;
+  flex-wrap: nowrap;
+}
+.showing .row::-webkit-scrollbar {
+  height: 10px;
+}
+.showing .row::-webkit-scrollbar-track {
+  background-color: rgb(233, 250, 156);
+}
+.showing .row::-webkit-scrollbar-thumb {
+  background-color: rgb(236, 136, 136);
+  border-radius: 10px;
+}
+.showing img {
+  width: 15vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.showing .row {
+  margin: auto;
+}
+.showing h2 {
+  position: relative;
+}
+.showing h2 .btn {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  padding: 0 !important;
+  font-size: 1.5rem;
+}
+.back {
+  font-size: 30px;
+  margin-left: 100%;
+  transform: translateX(-150%);
+}
+.product-page col {
+  position: relative;
+}
+.product-page .carousel-indicators li {
+  position: relative;
+  width: 50px;
+  height: 70px;
+}
+.product-page .side-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.product-page .descrip {
+  font-size: 25px;
+  position: relative;
+  text-align: justify;
+}
+.product-page button.order {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  width: 100px;
+}
+.product-page .order button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  width: 100px;
+}
+.product-page .order-details {
+  display: none;
+}
+h3.badge {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px !important;
+}
+.product-page .order-table {
+  font-size: larger;
+}
+.product-page .order-table img {
+  height: 120px;
+}
+.product-page .order-table .dlt-btn {
+  float: right;
+}
+.product-page .order-table .dlt-btn button {
+  margin-top: 50%;
+}
+.product-page .order-table .row:hover {
+  background: rgba(128, 128, 128, 0.377);
+}
+.product-page .order-table .row{
+  position: relative;
+}
+.product-page .order-table button{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}

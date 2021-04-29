@@ -1,0 +1,59 @@
+.navbar-brand,
+.navbar-brand img {
+  width: 50px;
+  justify-content: center;
+}
+.right {
+  overflow-y: auto;
+  height: 100vh;
+}
+.tableNames input{
+  text-align: left !important;
+  font-size: x-large;
+  text-transform: uppercase;
+}
+.dash-table{
+  font-size: larger;
+}
+.dash-table img{
+  height: 100px;
+}
+.dash-table .edit-btn{
+  float: right;
+}
+.dash-table .edit-btn button{
+  margin-top: 50%;
+}
+.dash-table .list-group-item:hover{
+  background: rgba(128, 128, 128, 0.377);
+}
+.back{
+  font-size: 40px;
+  padding: 5px;
+  position: absolute;
+  top: -5px;
+  right: 20px;
+}
+.back:hover{
+  cursor: pointer;
+}
+.edit img{
+  height: 150px;
+  flex-grow: 0;
+}
+.after-adding img{
+  height: 200px;
+}
+form.edit{
+  position: relative;
+}
+.edit input[name=delete]{
+  position: absolute;
+  right: 50%;
+  transform: translateX(120%);
+}
+.edit input[name=change]{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-120%);
+}
