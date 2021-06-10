@@ -11,7 +11,7 @@ if (!isset($_SESSION['showall-table'])) {
 
 require "templates/views/testheader.php";
 ?>
-    <section>
+    <section class="slider">
         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#main_slider" data-slide-to="0" class="active"></li>
@@ -27,12 +27,12 @@ require "templates/views/testheader.php";
                                     <h1>Welcome to <strong class="color">Our Shop</strong></h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                                     <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
-                                    <a class="btn btn-lg btn-primary" href="about.html" role="button">About </a>
+                                    <a class="btn btn-lg btn-primary" href="#" role="button">About </a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="img-box">
-                                    <figure><img src="img/boksing-gloves.png" alt="img" /></figure>
+                                    <figure><img src="images/child-image.png" alt="img" /></figure>
                                 </div>
                             </div>
                         </div>
@@ -43,15 +43,15 @@ require "templates/views/testheader.php";
                         <div class="row marginii">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="carousel-caption ">
-                                    <h1>Welcome to <strong class="color">Our Shop</strong></h1>
+                                    <h1>Holiday Season <strong class="color">is here</strong></h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                                     <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
-                                    <a class="btn btn-lg btn-primary" href="about.html" role="button">About</a>
+                                    <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                 <div class="img-box ">
-                                    <figure><img src="img/boksing-gloves.png" alt="img" /></figure>
+                                    <figure><img src="images/t-shirt.png" alt="img" /></figure>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@ require "templates/views/testheader.php";
                                     <h1>Welcome to <strong class="color">Our Shop</strong></h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
                                     <a class="btn btn-lg btn-primary" href="#" role="button">Buy Now</a>
-                                    <a class="btn btn-lg btn-primary" href="about.html" role="button">About</a>
+                                    <a class="btn btn-lg btn-primary" href="#" role="button">About</a>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
@@ -77,16 +77,16 @@ require "templates/views/testheader.php";
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <a class="carousel-control-prev makeLight" href="#main_slider" role="button" data-slide="prev">
                 <i class='fa fa-angle-left'></i></a>
-            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <a class="carousel-control-next makeLight" href="#main_slider" role="button" data-slide="next">
                 <i class='fa fa-angle-right'></i>
             </a>
         </div>
     </section>
     <form action="upload/nav.php" method="POST">
         <?php for ($i = 0; $i < $tables->num_rows; $i++) {
-            $categ = $conn->query("SELECT image,title,price FROM " . $table[$i][1] . " ORDER BY time LIMIT 6"); ?>
+            $categ = $conn->query("SELECT id,image,title,price FROM " . $table[$i][1] . " ORDER BY time LIMIT 6"); ?>
             <div id="plant" class="section product">
                 <div class="container">
                     <div class="row">

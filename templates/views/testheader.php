@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Sock</title>
+    <title>Ecommerce</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -54,33 +54,21 @@
     <header class="section">
         <!-- header inner -->
         <form action="upload/nav.php" method="POST">
-            <div class="header_main">
-                <div class="header_main">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="margin-left: -50px;margin-top: -35px;margin-right: 100px;max-width: 150px;">
-                                <div class="full">
-                                    <div class="center-desk">
-                                        <div class="logo"> <button name="back-index" value="home"><img src="img/logo.png" alt="#"></button> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                                <div class="menu-area">
-                                    <div class="limit-box">
-                                        <nav class="main-menu">
-                                            <ul class="menu-area-main">
-                                                <li> <button class="nav-link btn" value="mens" name="showall">Men</button> </li>
-                                                <li> <button class="nav-link btn" value="womens" name="showall">Women</button> </li>
-                                                <li><button class="nav-link btn" value="kids" name="showall">Kids</button></li>
-                                                <li><button class="nav-link btn" disabled>Offers</button></li>
-                                                <li><a href="#footer" class="nav-link btn">Contact Us</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col headLogo">
+                        <button name="back-index" value="home" style="background: transparent;"><img src="img/logo.png" alt="#"></button>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 headLinks">
+                        <nav class="main-menu">
+                            <ul class="menu-area-main">
+                                <li> <button class="nav-link btn" value="mens" name="showall">Men</button> </li>
+                                <li> <button class="nav-link btn" value="womens" name="showall">Women</button> </li>
+                                <li><button class="nav-link btn" value="kids" name="showall">Kids</button></li>
+                                <li><button class="nav-link btn" disabled>Offers</button></li>
+                                <li><a href="#footer" class="nav-link btn">Contact Us</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
