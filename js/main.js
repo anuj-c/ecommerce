@@ -17,3 +17,4 @@ if(orderBtn != null){
     orderDetail.setAttribute("style", "display:block");
   })
 }
+

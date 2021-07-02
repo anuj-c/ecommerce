@@ -9,7 +9,7 @@ $table = $tables->fetch_all();
 
 if (!isset($_SESSION['showall-table'])) {
 
-require "templates/views/testheader.php";
+    require "templates/views/testheader.php";
 ?>
     <section class="slider">
         <div id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
@@ -84,9 +84,10 @@ require "templates/views/testheader.php";
             </a>
         </div>
     </section>
-    <form action="upload/nav.php" method="POST">
-        <?php for ($i = 0; $i < $tables->num_rows; $i++) {
-            $categ = $conn->query("SELECT id,image,title,price FROM " . $table[$i][1] . " ORDER BY time LIMIT 6"); ?>
+
+    <?php for ($i = 0; $i < $tables->num_rows; $i++) {
+        $categ = $conn->query("SELECT id,image,title,price FROM " . $table[$i][1] . " ORDER BY time LIMIT 6"); ?>
+        <form action="upload/nav.php" method="POST">
             <div id="plant" class="section product">
                 <div class="container">
                     <div class="row">
@@ -104,21 +105,23 @@ require "templates/views/testheader.php";
                         <?php if ($categ->num_rows > 0) {
                             while ($row = $categ->fetch_assoc()) { ?>
                                 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="sport_product">
-                                        <figure><img src="image/<?php echo $table[$i][1] . "/" . json_decode($row['image'])[0] ?>" /></figure>
+                                    <input type="text" value="<?php echo $table[$i][1] ?>" name="showall" hidden>
+                                    <button class="mx-2 mt-2 bg-light border btn" name="product" value="<?php echo $row['id'] ?>">
+                                        <img src="image/<?php echo $table[$i][1] . "/" . json_decode($row['image'])[0] ?>" />
                                         <h3>₹<strong class="price_text"><?php echo $row['price'] ?></strong></h3>
                                         <h4 class="text-uppercase"><?php echo $row['title'] ?></h4>
-                                    </div>
+                                    </button>
                                 </div>
                         <?php }
                         } ?>
                     </div>
                 </div>
             </div>
-        <?php } ?>
-    </form>
+        </form>
+    <?php } ?>
+
 <?php
-require "templates/views/testfooter.php";
+    require "templates/views/testfooter.php";
 } else {
     require "templates/display/testshowall.php";
 }

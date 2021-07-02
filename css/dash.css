@@ -57,3 +57,30 @@ form.edit{
   left: 50%;
   transform: translateX(-120%);
 }
+.displayImage{
+  border: 5px black;
+  border-style: double;
+  padding: 0;
+  margin-left: 15px;
+}
+.modal-body{
+  overflow-x: scroll;
+}
+.modal-body img{
+  height: 150px;
+  /* width: 100px; */
+  cursor: pointer;
+  padding: 0;
+}
+.modal-body img:hover{
+  transform: scale(0.95);
+  transition: 0.1s;
+  transition-timing-function: ease-in;
+}
+.modal-body label{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+input[type=radio]:checked + label>img{
+  border: red 2px solid;
+}
