@@ -25,7 +25,8 @@ if (isset($_POST['login'])) {
     }
 
     //FOR REGISTRATION
-    // $sql = $conn->query("INSERT INTO login (name,password) VALUES ('".$_POST['email']."', '$pass')");
+    // $sql = $conn->query("INSERT INTO login (name,password) VALUES ('" . $_POST['email'] . "', '$pass')");
+    // echo "<p class='display-4 text-center text-danger'>Done Password or email</p>";
 }
 ?>
 <!DOCTYPE html>

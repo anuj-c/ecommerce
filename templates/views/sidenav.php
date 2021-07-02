@@ -29,6 +29,7 @@
                 <input type="submit" value="Dashboard" name="menu" class="nav-link btn text-white mx-auto my-4">
                 <input type="submit" value="Add" name="menu" class="nav-link btn text-white mx-auto my-4">
                 <input type="submit" value="Orders" name="menu" class="nav-link btn text-white mx-auto my-4">
+                <input type="submit" value="Register" name="menu" class="nav-link btn text-white mx-auto my-4">
                 <input type="submit" value="Logout" name="menu" class="nav-link btn text-white mx-auto my-4">
             </form>
         </nav>
