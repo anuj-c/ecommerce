@@ -11,14 +11,16 @@ if (isset($_POST['login'])) {
 
     //  FOR LOGIN
     $sql = $conn->query("SELECT * FROM login WHERE name='" . $_POST['email'] . "'");
-    if ($sql->num_rows > 0) {
+    if($sql->num_rows == 0)
+        echo "<p class='display-4 text-center text-danger'>No email found</p>";
+    else if ($sql->num_rows > 0) {
         $row = $sql->fetch_assoc();
         if (strcmp($pass, $row['password']) == 0) {
             // $_SESSION['login'] = $row['email'];
             setcookie('login', $row['name'], time() + (86400 * 3), "/");
             header("Location:Dashboard.php");
         } else {
-            echo "<p class='display-4 text-center text-danger'>Wrong Password or email</p>";
+            echo "<p class='display-4 text-center text-danger'>Password did not match</p>";
         }
     } else {
         echo "Error" . $conn->error;
